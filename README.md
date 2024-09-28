@@ -1,50 +1,90 @@
-# Welcome to your Expo app 👋
+# Scoober
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Scoober is a ride-sharing application built using Expo and React Native. The app allows users to request rides, track their trips, and manage their bookings through a simple and intuitive interface.
 
-## Get started
+## 🛠️ Features
 
-1. Install dependencies
+- **Ride Booking**: Request a ride with ease.
+- **Trip Tracking**: View real-time trip updates.
+- **Responsive Design**: Optimized for mobile devices.
+- **User Management**: Secure sign-in and profile handling.
 
-   ```bash
-   npm install
-   ```
+## 📸 Screenshots
+Screenshots coming soon!
 
-2. Start the app
+## 🛠️ Technologies Used
 
-   ```bash
-    npx expo start
-   ```
+- **Expo**: Framework for building React Native apps.
+- **TypeScript**: Typed JavaScript for scalability.
+- **React Native**: Mobile app framework.
+- **Tailwind CSS**: For styling components.
+- **PostgreSQL**: Database used for storing user and ride-related data.
+- **Stripe**: Integrated for handling payment processing.
 
-In the output, you'll find options to open the app in a
+## 📂 Project Structure
+<details><pre><code>app
+  (api)
+    (stripe)
+      create-api.ts
+      pay-api.ts
+    ride
+      [id]+api.ts
+      create-api.ts
+    driver-api.ts
+    user-api.ts
+  (auth)
+    _layout.tsx
+    sign-in.tsx
+    sign-up.tsx
+    welcome.tsx
+  (root)
+    (tabs)
+      _layout.tsx
+      chat.tsx
+      home.tsx
+      profile.tsx
+      rides.tsx
+    _layout.tsx
+    book-ride.tsx
+    confirm-ride.tsx
+    find-ride.tsx
+  _layout.tsx
+  +html.tsx
+  +not-found.tsx
+assets
+  fonts
+  icons
+  images
+components
+  CustomButton.tsx
+  DriverCard.tsx
+  GoogleTextInput.tsx
+  InputField.tsx
+  Map.tsx
+  OAuth.tsx
+  Payment.tsx
+  RideCard.tsx
+  RideLayout.tsx
+constants
+  index.ts
+lib
+  auth.ts
+  fetch.ts
+  map.ts
+  utils.ts
+store
+  index.ts
+types
+  image.d.ts
+  type.d.ts
+</code></pre></details>
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- **app/(api)**: Contains API routes for Stripe payments and ride-related functionalities (booking, driver, user).
+- **app/(auth)**: Manages user authentication, including sign-in, sign-up, and welcome pages.
+- **app/(root)**: Handles the core pages like home, profile, chat, and rides, with additional tabs and booking pages.
+- **assets**: Stores fonts, icons, and images.
+- **components**: Reusable UI components such as `CustomButton`, `DriverCard`, and `RideLayout`.
+- **constants**: Stores constant values and configurations.
+- **lib**: Utility functions like authentication, fetching data, and map handling.
+- **store**: Centralized state management.
+- **types**: TypeScript definition files.
